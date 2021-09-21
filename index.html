@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <title>Gym SRP</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold fs-3" href="#">Gym SRP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="#containerS">SET</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="#containerR">REST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="#containerP">PERCENTAGE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="mailto:marcocrupi@hotmail.it">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row justify-content-md-center" id="containerD">
+      <div class="col-lg-8 text-center">
+        <p id="description" class="mt-5 mb-5">An app to keep track of series, recovery times and calculate simple
+          percentages.</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center pt-5 pb-5" id="containerS">
+      <div class="col col-md-auto text-center pt-5 pb-5">
+        <p class="nameS">SET</p>
+        <p class="outputs" id="sets">0</p>
+        <button id="setDone" type="button" class="btn btn-warning btn-lg">DONE</button>
+        <button id="resetSets" type="button" class="btn btn-danger btn-lg">RESET</button>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center pt-5 pb-5" id="containerR">
+      <div class="col col-md-auto text-center pt-5 pb-5">
+        <p class="nameS">REST</p>
+        <p class="outputs" id="timer">00:00</p>
+        <form class="pb-5">
+          <label for="minutes">Minutes: </label>
+          <input id="minutes" name="minutes" type="range" step="1" min="0" max="60" value="0"
+            oninput="this.nextElementSibling.value = this.value"><output id="otM">0</output>
+        </br>
+          <label for="seconds">Seconds: </label>
+          <input id="seconds" name="seconds" type="range" step="1" min="0" max="60" value="0"
+            oninput="this.nextElementSibling.value = this.value"><output id="otS">0</output>
+        </form>
+        <button type="button" class="btn btn-warning btn-lg"
+          onclick="timer(document.getElementById('seconds').value,document.getElementById('minutes').value)">START</button>
+        <button id= "reset" type="button" class="btn btn-danger btn-lg">RESET</button>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center pt-5 pb-5" id="containerP">
+      <div class="col col-md-auto text-center pt-5 pb-5">
+        <p class="nameS mb5">PERCENTAGE CALCULATOR</p>
+        <form>
+          <div class="input-group mb-4 mt-4 mr-4">
+            <span class="input-group-text">Percentage:</span>
+            <input type="number" class="form-control" id="percentage" value="0">
+            <span class="input-group-text">%</span>
+          </div>
+
+          <div class="input-group mb-4 mt-4">
+            <span class="input-group-text">Of:</span>
+            <input type="number" class="form-control" id="number" value="0">
+          </div>
+        </form>
+
+        <p class="resultT">Result:</p>
+        <p class="outputs" id="resultP">0</p>
+        <button type="button" class="btn btn-warning btn-lg"
+          onclick="calculatorP(document.getElementById('percentage').value,document.getElementById('number').value)">COUNT</button>
+        <button id="resetP" type="button" class="btn btn-danger btn-lg">RESET</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
