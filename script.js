@@ -76,9 +76,9 @@ function stopFunction() {
 
 function clearRange() {
   document.getElementById("seconds").value = 0;
-  document.getElementById("otS").value = 0;
+  // document.getElementById("otS").value = 0;
   document.getElementById("minutes").value = 0;
-  document.getElementById("otM").value = 0;
+  // document.getElementById("otM").value = 0;
 }
 
 // -- END TIMER --

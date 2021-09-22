@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <title>Gym SRP</title>
 </head>
 
@@ -60,7 +61,17 @@
       <div class="col col-md-auto text-center pt-5 pb-5">
         <p class="nameS">REST</p>
         <p class="outputs" id="timer">00:00</p>
+
         <form class="pb-5">
+          <label for="minutes">Minutes: </label>
+          <input id="minutes" name="minutes" type="number" step="1" min="0" max="60" value="0" pattern="[0-9]+">
+        </br>
+          <label for="seconds">Seconds: </label>
+          <input id="seconds" name="seconds" type="number" step="1" min="0" max="60" value="0" pattern="[0-9]+">
+        </form>
+
+        <!-- Version with "range" and "output" -->
+        <!-- <form class="pb-5">
           <label for="minutes">Minutes: </label>
           <input id="minutes" name="minutes" type="range" step="1" min="0" max="60" value="0"
             oninput="this.nextElementSibling.value = this.value"><output id="otM">0</output>
@@ -68,7 +79,7 @@
           <label for="seconds">Seconds: </label>
           <input id="seconds" name="seconds" type="range" step="1" min="0" max="60" value="0"
             oninput="this.nextElementSibling.value = this.value"><output id="otS">0</output>
-        </form>
+        </form> -->
         <button type="button" class="btn btn-warning btn-lg"
           onclick="timer(document.getElementById('seconds').value,document.getElementById('minutes').value)">START</button>
         <button id= "reset" type="button" class="btn btn-danger btn-lg">RESET</button>
@@ -81,13 +92,13 @@
         <form>
           <div class="input-group mb-4 mt-4 mr-4">
             <span class="input-group-text">Percentage:</span>
-            <input type="number" class="form-control" id="percentage" value="0">
+            <input type="number" class="form-control" id="percentage" value="0" pattern="[0-9]+">
             <span class="input-group-text">%</span>
           </div>
 
           <div class="input-group mb-4 mt-4">
             <span class="input-group-text">Of:</span>
-            <input type="number" class="form-control" id="number" value="0">
+            <input type="number" class="form-control" id="number" value="0" pattern="[0-9]+">
           </div>
         </form>
 
@@ -100,16 +111,22 @@
     </div>
   </div>
 
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-12 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2021. All Rights Reserved by 
+       <a href="https://github.com/marcocrupi">Marco Crupi</a>.
+          </p>
+        </div>
+
+        
+      </div>
+    </div>
+</footer>
+
   <script type="text/javascript" src="script.js"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V45CZXQGX8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V45CZXQGX8');
-</script>
 </body>
 
 </html>
