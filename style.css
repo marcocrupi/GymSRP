@@ -7,6 +7,10 @@ body {
   color: white;
 }
 
+input:invalid {
+  border: 3px solid red;
+}
+
 .outputs {
   font-size: 3rem;
 }
@@ -77,13 +81,16 @@ output {
   line-height: 24px;
   color: #737373;
 }
+
 .site-footer hr {
   border-top-color: #bbb;
   opacity: 0.5;
 }
+
 .site-footer hr.small {
   margin: 20px 0;
 }
+
 .site-footer h6 {
   color: #fff;
   font-size: 16px;
@@ -91,35 +98,42 @@ output {
   margin-top: 5px;
   letter-spacing: 2px;
 }
+
 .site-footer a {
   color: #737373;
 }
+
 .site-footer a:hover {
   color: #000000;
   text-decoration: none;
 }
+
 .footer-links {
   padding-left: 0;
   list-style: none;
 }
+
 .footer-links li {
   display: block;
 }
+
 .footer-links a {
   color: #737373;
 }
-.footer-links a:active,
-.footer-links a:focus,
-.footer-links a:hover {
+
+.footer-links a:active, .footer-links a:focus, .footer-links a:hover {
   color: #3366cc;
   text-decoration: none;
 }
+
 .footer-links.inline li {
   display: inline-block;
 }
+
 .site-footer .social-icons {
   text-align: right;
 }
+
 .site-footer .social-icons a {
   width: 40px;
   height: 40px;
@@ -129,20 +143,22 @@ output {
   border-radius: 100%;
   background-color: #33353d;
 }
+
 .copyright-text {
   margin: 0;
 }
+
 @media (max-width: 991px) {
   .site-footer [class^="col-"] {
     margin-bottom: 30px;
   }
 }
+
 @media (max-width: 767px) {
   .site-footer {
     padding-bottom: 0;
   }
-  .site-footer .copyright-text,
-  .site-footer .social-icons {
+  .site-footer .copyright-text, .site-footer .social-icons {
     text-align: center;
   }
 }
@@ -155,8 +171,7 @@ input[type="number"] {
   appearance: textfield;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
@@ -165,14 +180,13 @@ input[type="number"]::-webkit-outer-spin-button {
   display: inline-flex;
 }
 
-.number-input,
-.number-input * {
+.number-input, .number-input * {
   box-sizing: border-box;
 }
 
 .number-input button {
   outline: none;
-    -webkit-appearance: none;
+  -webkit-appearance: none;
   background-color: transparent;
   border: none;
   align-items: center;
@@ -186,8 +200,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 50%;
 }
 
-.number-input button:before,
-.number-input button:after {
+.number-input button:before, .number-input button:after {
   display: inline-block;
   position: absolute;
   content: "";
@@ -196,6 +209,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #ffffff;
   transform: translate(-50%, -50%);
 }
+
 .number-input button.plus:after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
@@ -206,7 +220,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0.5rem;
   border: none;
   border-width: 0 2px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   height: 3rem;
   font-weight: bold;
   text-align: center;

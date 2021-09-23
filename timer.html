@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Gym SRP Timer</title>
+</head>
+
+<body>
+
+    <center>
+
+        <p class="nameS">REST</p>
+        <p class="outputs" id="timer">00:00</p>
+        <div class="number-input mb-5">
+            <label for="minutes">Minutes: </label>
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="ms-2 me-2"></button>
+            <input id="minutes" min="0" max="60" name="minutes" value="0" type="number" pattern="[0-9]+">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus ms-2"></button>
+        </div>
+        </br>
+        <div class="number-input mb-5">
+            <label for="minutes">Seconds: </label>
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="ms-2 me-2"></button>
+            <input id="seconds" min="0" max="60" name="seconds" value="0" type="number" pattern="[0-9]+">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus ms-2"></button>
+        </div>
+        </br>
+        <button type="button" id="start" class="btn btn-warning btn-lg"
+            onclick="timer(document.getElementById('seconds').value,document.getElementById('minutes').value)">START /
+            STOP</button>
+        <button id="reset" type="button" class="btn btn-danger btn-lg" onclick="resetFunction()">RESET</button>
+
+    </center>
+    <script type="text/javascript" src="./timer.js"></script>
+</body>
+
+</html>
