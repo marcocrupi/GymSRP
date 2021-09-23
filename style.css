@@ -31,11 +31,6 @@ label {
   font-size: 1.5rem;
 }
 
-output {
-  margin-left: 0.5rem;
-  font-size: 1.5rem;
-}
-
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-item {
     padding-right: 1rem;
