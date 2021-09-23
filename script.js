@@ -46,8 +46,8 @@ const resultRM = document.getElementById("resultRM");
 const resetRM = document.getElementById("resetRM");
 
 const calculatorRM = (r, w) => {
-  r = parseFloat(r) || 0;
-  w = parseFloat(w) || 0;
+  r = parseInt(r) || 0;
+  w = parseInt(w) || 0;
   let op1 = r * 2.5;
   let op2 = 100 - op1;
   let op3 = op2 / 100;
