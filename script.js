@@ -23,14 +23,16 @@ const result = document.getElementById("resultP");
 const resetPer = document.getElementById("resetP");
 
 const calculatorP = (per, num) => {
-  let result1 = parseFloat(num) * parseFloat(per);
+  per = parseFloat(per) || 0;
+  num = parseFloat(num) || 0;
+  let result1 = num * per;
   let result2 = result1 / 100;
   return (result.innerHTML = result2);
 };
 
 const resetP = () => {
-  document.getElementById("percentage").value = 0;
-  document.getElementById("number").value = 0;
+  document.getElementById("percentage").value = '';
+  document.getElementById("number").value = '';
   return (result.innerHTML = 0);
 };
 

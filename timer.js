@@ -4,9 +4,11 @@ let inputS = document.getElementById("start");
 let clickCounter = 0;
 
 function timer(s, m) {
-  console.log("inizio funzione", clickCounter);
-  m = parseInt(m) * 60;
-  s = parseInt(m) + parseInt(s) + 1;
+  s = parseInt(s) || 0;
+  m = parseInt(m) || 0;
+
+  m = m * 60;
+  s = m + s + 1;
 
   countDown = setInterval(() => {
     s--;
@@ -18,7 +20,7 @@ function timer(s, m) {
       sound(s);
     }
   }, 1000);
-  console.log("fine primo countdown", clickCounter);
+
   if (inputS.onclick) {
   } else {
   }
