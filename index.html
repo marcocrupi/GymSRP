@@ -105,7 +105,20 @@
       <form>
         <div class="input-group mb-3 mt-4">
           <span class="input-group-text">Reps:</span>
-          <input type="number" class="form-control" id="reps" placeholder="0" pattern="[0-9]+" />
+          <input type="number" onkeyup=imposeMinMax(this) class="form-control" id="reps" min="0" max="12"
+            placeholder="0" pattern="[0-9]+" />
+          <script>
+            function imposeMinMax(el) {
+              if (el.value != "") {
+                if (parseInt(el.value) < parseInt(el.min)) {
+                  el.value = el.min;
+                }
+                if (parseInt(el.value) > parseInt(el.max)) {
+                  el.value = el.max;
+                }
+              }
+            }
+          </script>
         </div>
 
         <div class="input-group mb-3 mt-4">
