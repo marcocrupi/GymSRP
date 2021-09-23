@@ -39,3 +39,28 @@ const resetP = () => {
 resetPer.addEventListener("click", resetP);
 
 // -- END PERCENTAGE CALCULATOR --
+
+// -- PREDICTION EQUATIONS FOR 1RM --
+
+const resultRM = document.getElementById("resultRM");
+const resetRM = document.getElementById("resetRM");
+
+const calculatorRM = (r, w) => {
+  r = parseFloat(r) || 0;
+  w = parseFloat(w) || 0;
+  let op1 = r * 2.5;
+  let op2 = 100 - op1;
+  let op3 = op2 / 100;
+  let op4 = w / op3;
+  return (resultRM.innerHTML = op4 + "Kg");
+};
+
+const resetRMF = () => {
+  document.getElementById("weight").value = "";
+  document.getElementById("reps").value = "";
+  return (resultRM.innerHTML = 0);
+};
+
+resetRM.addEventListener("click", resetRMF);
+
+// -- END PERCENTAGE CALCULATOR --
