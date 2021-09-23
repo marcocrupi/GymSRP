@@ -1,5 +1,5 @@
 # GymSRP
 
-An app to keep track of series, recovery times and calculate simple percentages. 
+An app to keep track of series, recovery times, calculate simple percentages and estimated 1 RM. 
 
 Built with Bootstrap 5.
