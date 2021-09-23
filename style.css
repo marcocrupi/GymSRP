@@ -221,8 +221,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .number-input input[type="number"] {
   font-family: sans-serif;
-  max-width: 8rem;
-  width: 7rem;
+  max-width: 7rem;
+  width: 6rem;
   padding: 0.5rem;
   border: none;
   border-width: 0 2px;
