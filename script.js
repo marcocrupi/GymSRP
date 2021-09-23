@@ -52,7 +52,7 @@ const calculatorRM = (r, w) => {
   let op2 = 100 - op1;
   let op3 = op2 / 100;
   let op4 = w / op3;
-  return (resultRM.innerHTML = op4 + "Kg");
+  return (resultRM.innerHTML = parseInt(op4) + "Kg");
 };
 
 const resetRMF = () => {
