@@ -222,3 +222,8 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   text-align: center;
   color: #000000;
 }
+
+input-group input[type="number"] {
+  max-width: 8rem;
+  width: 7rem;
+}
