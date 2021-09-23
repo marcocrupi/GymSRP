@@ -24,14 +24,16 @@
         <div class="number-input mb-5">
             <label for="minutes">Minutes: </label>
             <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="ms-2 me-2"></button>
-            <input id="minutes" min="0" max="60" name="minutes" value="0" type="number" pattern="[0-9]+">
+            <input id="minutes" class="form-control" min="0" max="60" name="minutes" value="0" type="number"
+                pattern="[0-9]+">
             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus ms-2"></button>
         </div>
         </br>
         <div class="number-input mb-5">
             <label for="minutes">Seconds: </label>
             <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="ms-2 me-2"></button>
-            <input id="seconds" min="0" max="60" name="seconds" value="0" type="number" pattern="[0-9]+">
+            <input id="seconds" class="form-control" min="0" max="60" name="seconds" value="0" type="number"
+                pattern="[0-9]+">
             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus ms-2"></button>
         </div>
         </br>

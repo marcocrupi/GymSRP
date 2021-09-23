@@ -8,7 +8,7 @@ body {
 }
 
 input:invalid {
-  border: 3px solid red;
+  border: 2px solid red;
 }
 
 .outputs {
@@ -223,7 +223,11 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   color: #000000;
 }
 
-input-group input[type="number"] {
+.input-group input[type="number"] {
   max-width: 8rem;
   width: 7rem;
+}
+
+.input-group {
+  justify-content: center;
 }

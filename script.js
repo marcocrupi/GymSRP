@@ -31,8 +31,8 @@ const calculatorP = (per, num) => {
 };
 
 const resetP = () => {
-  document.getElementById("percentage").value = '';
-  document.getElementById("number").value = '';
+  document.getElementById("percentage").value = "";
+  document.getElementById("number").value = "";
   return (result.innerHTML = 0);
 };
 
