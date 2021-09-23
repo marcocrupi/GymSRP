@@ -97,48 +97,50 @@
         </button>
       </div>
     </div>
-  </div>
 
-  <div class="row justify-content-md-center pt-3 pb-5" id="containerE">
-    <div class="col col-md-auto text-center pt-5 pb-5">
-      <p class="nameS mb-4">PREDICTION EQUATIONS FOR 1RM</p>
-      <form>
-        <div class="input-group mb-3 mt-4">
-          <span class="input-group-text">Reps:</span>
-          <input type="number" onkeyup=imposeMinMax(this) class="form-control" id="reps" min="0" max="12"
-            placeholder="0" pattern="[0-9]+" />
-          <script>
-            function imposeMinMax(el) {
-              if (el.value != "") {
-                if (parseInt(el.value) < parseInt(el.min)) {
-                  el.value = el.min;
-                }
-                if (parseInt(el.value) > parseInt(el.max)) {
-                  el.value = el.max;
+    <div class="row justify-content-md-center pt-3 pb-5" id="containerE">
+      <div class="col col-md-auto text-center pt-5 pb-5">
+        <p class="nameS mb-4">PREDICTION EQUATIONS FOR 1RM</p>
+        <form>
+          <div class="input-group mb-3 mt-4">
+            <span class="input-group-text">Reps:</span>
+            <input type="number" onkeyup=imposeMinMax(this) class="form-control" id="reps" min="0" max="12"
+              placeholder="0" pattern="[0-9]+" />
+            <script>
+              function imposeMinMax(el) {
+                if (el.value != "") {
+                  if (parseInt(el.value) < parseInt(el.min)) {
+                    el.value = el.min;
+                  }
+                  if (parseInt(el.value) > parseInt(el.max)) {
+                    el.value = el.max;
+                  }
                 }
               }
-            }
-          </script>
-        </div>
+            </script>
+          </div>
 
-        <div class="input-group mb-3 mt-4">
-          <span class="input-group-text">Weight:</span>
-          <input type="number" class="form-control" id="weight" placeholder="0" pattern="[0-9]+" />
-          <span class="input-group-text">Kg</span>
-        </div>
-      </form>
+          <div class="input-group mb-3 mt-4">
+            <span class="input-group-text">Weight:</span>
+            <input type="number" class="form-control" id="weight" placeholder="0" pattern="[0-9]+" />
+            <span class="input-group-text">Kg</span>
+          </div>
+        </form>
 
-      <p class="resultT">Estimated 1 RM:</p>
-      <p class="outputs" id="resultRM">0</p>
-      <button type="button" class="btn btn-warning btn-lg"
-        onclick="calculatorRM(document.getElementById('reps').value,document.getElementById('weight').value)">
-        COUNT
-      </button>
-      <button id="resetRM" type="button" class="btn btn-danger btn-lg">
-        RESET
-      </button>
+        <p class="resultT">Estimated 1 RM:</p>
+        <p class="outputs" id="resultRM">0</p>
+        <button type="button" class="btn btn-warning btn-lg"
+          onclick="calculatorRM(document.getElementById('reps').value,document.getElementById('weight').value)">
+          COUNT
+        </button>
+        <button id="resetRM" type="button" class="btn btn-danger btn-lg">
+          RESET
+        </button>
+      </div>
     </div>
   </div>
+
+
   </div>
 
   <!-- Site footer -->
