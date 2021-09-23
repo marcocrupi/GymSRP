@@ -3,34 +3,33 @@ const timerH = document.getElementById("timer");
 let inputS = document.getElementById("start");
 let clickCounter = 0;
 
-function timer (s, m) {
-  console.log('inizio funzione', clickCounter);
+function timer(s, m) {
+  console.log("inizio funzione", clickCounter);
   m = parseInt(m) * 60;
   s = parseInt(m) + parseInt(s) + 1;
 
-    countDown = setInterval(() => {
-      s--;
-      displayTime(s);
-      if (s <= 0 || s < 1) {
-        endTime();
-        clearInterval(countDown);
-     } else if (s <= 10) {
-        sound(s);
-      }
-    }, 1000);   
-    console.log('fine primo countdown', clickCounter);
- if (inputS.onclick) {
+  countDown = setInterval(() => {
+    s--;
+    displayTime(s);
+    if (s <= 0 || s < 1) {
+      endTime();
+      clearInterval(countDown);
+    } else if (s <= 10) {
+      sound(s);
+    }
+  }, 1000);
+  console.log("fine primo countdown", clickCounter);
+  if (inputS.onclick) {
+  } else {
+  }
 
- } else {
- }
-    
   inputS.onclick = function () {
     clickCounter++;
-    console.log('dopo il ++',clickCounter);
+    console.log("dopo il ++", clickCounter);
     if (clickCounter === 2) {
       clickCounter = 0;
       countDown = setInterval(() => {
-        s--;        
+        s--;
         displayTime(s);
         if (s <= 0 || s < 1) {
           endTime();
@@ -41,9 +40,9 @@ function timer (s, m) {
       }, 1000);
     } else if (clickCounter === 1) {
       stopFunction();
-    } 
+    }
   };
-};
+}
 
 function displayTime(second) {
   const min = Math.floor(second / 60);
@@ -60,8 +59,8 @@ function endTime() {
   utterance.rate = 1;
   speechSynthesis.speak(utterance);
   setTimeout(function clear() {
-    timerH.innerHTML = "00:00";
-  }, 2000);
+    resetFunction();
+  }, 1200);
 }
 
 function sound(second) {
