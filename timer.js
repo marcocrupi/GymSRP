@@ -21,10 +21,6 @@ function timer(s, m) {
     }
   }, 1000);
 
-  if (inputS.onclick) {
-  } else {
-  }
-
   inputS.onclick = function () {
     clickCounter++;
     console.log("dopo il ++", clickCounter);
@@ -49,9 +45,8 @@ function timer(s, m) {
 function displayTime(second) {
   const min = Math.floor(second / 60);
   const sec = Math.floor(second % 60);
-  timerH.innerHTML = `${min < 10 ? "0" : ""}${min}:${
-    sec < 10 ? "0" : ""
-  }${sec}`;
+  timerH.innerHTML = `${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""
+    }${sec}`;
 }
 
 function endTime() {
