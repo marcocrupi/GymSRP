@@ -14,12 +14,12 @@ input:invalid {
 .outputs {
   text-align: center;
   margin: auto;
-  font-size: 7rem;
+  font-size: 6rem;
 
   display: block;
-  height: 20rem;
-  width: 20rem;
-  line-height: 20rem;
+  height: 19rem;
+  width: 19rem;
+  line-height: 19rem;
 
   -moz-border-radius: 50%; /* or 50% */
   border-radius: 50%; /* or 50% */
