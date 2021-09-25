@@ -49,7 +49,7 @@
     <div class="row justify-content-md-center" id="containerD">
       <div class="col-lg-8 text-center">
         <p id="description" class="mt-5 mb-5">
-          An app to keep track of series, recovery times, calculate simple percentages and prediction for 1RM.
+          An app to keep track of sets, recovery times, calculate simple percentages and prediction for 1RM.
         </p>
       </div>
     </div>
@@ -57,19 +57,22 @@
     <div class="row justify-content-md-center pt-3 pb-5" id="containerS">
       <div class="col col-md-auto text-center pt-5 pb-5">
         <p class="nameS">SET</p>
-        <p class="outputs" id="sets">0</p>
-        <button id="setDone" type="button" class="btn btn-warning btn-lg">
-          DONE
+        <p class="outputs mt-5 mb-5" id="sets">0</p>
+        <button id="setDone+" type="button" class="btn btn-warning btn-lg">
+          +
         </button>
         <button id="resetSets" type="button" class="btn btn-danger btn-lg">
           RESET
+        </button>
+        <button id="setDone-" type="button" class="btn btn-warning btn-lg">
+          -
         </button>
       </div>
     </div>
 
     <div class="row justify-content-md-center pt-3 pb-5" id="containerR">
       <div class="col col-md-auto text-center pt-5 pb-5">
-        <iframe scrolling="no" width="360" height="400" frameborder="0" src="./timer.html"></iframe>
+        <iframe scrolling="no" width="360" height="750px" frameborder="0" src="./timer.html"></iframe>
       </div>
     </div>
 
@@ -77,6 +80,7 @@
       <div class="col col-md-auto text-center pt-5 pb-5">
         <p class="nameS mb-4">PERCENTAGE CALCULATOR</p>
         <form>
+
           <div class="input-group mb-3 mt-4 mr-4">
             <span class="input-group-text">Percentage:</span>
             <input type="number" class="form-control" id="percentage" placeholder="0" pattern="[0-9]+" />
@@ -87,10 +91,12 @@
             <span class="input-group-text">Of:</span>
             <input type="number" class="form-control" id="number" placeholder="0" pattern="[0-9]+" />
           </div>
+
         </form>
 
         <p class="resultT">Result:</p>
-        <p class="outputs" id="resultP">0</p>
+        <p class="outputs mt-5 mb-5" id="resultP">0</p>
+
         <button type="button" class="btn btn-warning btn-lg"
           onclick="calculatorP(document.getElementById('percentage').value,document.getElementById('number').value)">
           COUNT
@@ -125,13 +131,13 @@
 
           <div class="input-group mb-3 mt-4">
             <span class="input-group-text">Weight:</span>
-            <input type="number" class="form-control" id="weight" placeholder="0" pattern="[0-9]+" />
+            <input type="number" step="0.1" class="form-control" id="weight" placeholder="0" pattern="[0-9]+" />
             <span class="input-group-text">Kg</span>
           </div>
         </form>
 
         <p class="resultT">Estimated 1 RM:</p>
-        <p class="outputs" id="resultRM">0</p>
+        <p class="outputs mt-5 mb-5" id="resultRM">0</p>
         <button type="button" class="btn btn-warning btn-lg"
           onclick="calculatorRM(document.getElementById('reps').value,document.getElementById('weight').value)">
           COUNT

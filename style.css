@@ -12,7 +12,20 @@ input:invalid {
 }
 
 .outputs {
-  font-size: 3rem;
+  text-align: center;
+  margin: auto;
+  font-size: 7rem;
+
+  display: block;
+  height: 20rem;
+  width: 20rem;
+  line-height: 20rem;
+
+  -moz-border-radius: 50%; /* or 50% */
+  border-radius: 50%; /* or 50% */
+
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .navbar-collapse {
@@ -39,7 +52,7 @@ label {
 }
 
 #description {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: italic;
 }
 

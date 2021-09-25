@@ -1,18 +1,33 @@
 // -- START SET --
 
 const sets = document.getElementById("sets");
-const setDone = document.getElementById("setDone");
+const setDoneP = document.getElementById("setDone+");
+const setDoneL = document.getElementById("setDone-");
 const reset = document.getElementById("resetSets");
+let setR = 0;
 
-const contatore = () => {
-  return ++sets.innerHTML;
+const counterP = () => {
+  ++setR;
+  if (setR >= 0) {
+    ++sets.innerHTML;
+  }
+};
+
+const counterL = () => {
+  --setR;
+  --sets.innerHTML;
+  if (setR <= 0 || setR < 1) {
+    setR = 0;
+    sets.innerHTML = "0";
+  }
 };
 
 const resetSets = () => {
   return (sets.innerHTML = 0);
 };
 
-setDone.addEventListener("click", contatore);
+setDoneP.addEventListener("click", counterP);
+setDoneL.addEventListener("click", counterL);
 reset.addEventListener("click", resetSets);
 
 // -- END SET --
@@ -47,7 +62,7 @@ const resetRM = document.getElementById("resetRM");
 
 const calculatorRM = (r, w) => {
   r = parseInt(r) || 0;
-  w = parseInt(w) || 0;
+  w = parseFloat(w) || 0;
   let op1 = r * 2.5;
   let op2 = 100 - op1;
   let op3 = op2 / 100;

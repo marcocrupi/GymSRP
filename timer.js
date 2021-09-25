@@ -32,7 +32,7 @@ function timer(s, m) {
         if (s <= 0 || s < 1) {
           endTime();
           clearInterval(countDown);
-        } else if (s <= 10) {
+        } else if (s <= 3) {
           sound(s);
         }
       }, 1000);
@@ -40,16 +40,19 @@ function timer(s, m) {
       stopFunction();
     }
   };
+  clearRange();
 }
 
 function displayTime(second) {
   const min = Math.floor(second / 60);
   const sec = Math.floor(second % 60);
-  timerH.innerHTML = `${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""
-    }${sec}`;
+  timerH.innerHTML = `${min < 10 ? "0" : ""}${min}:${
+    sec < 10 ? "0" : ""
+  }${sec}`;
 }
 
 function endTime() {
+  timerH.style.fontSize = "3rem";
   timerH.innerHTML = "TIME OUT";
   let utterance = new SpeechSynthesisUtterance("TIME OUT");
   utterance.lang = "en-US";
@@ -74,6 +77,11 @@ function resetFunction() {
 
 function stopFunction() {
   clearInterval(countDown);
+}
+
+function clearRange() {
+  document.getElementById("seconds").value = 0;
+  document.getElementById("minutes").value = 0;
 }
 
 // -- END TIMER --
