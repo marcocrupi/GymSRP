@@ -23,7 +23,6 @@ function timer(s, m) {
 
   inputS.onclick = function () {
     clickCounter++;
-    console.log("dopo il ++", clickCounter);
     if (clickCounter === 2) {
       clickCounter = 0;
       countDown = setInterval(() => {
