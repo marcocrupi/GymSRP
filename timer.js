@@ -2,6 +2,7 @@
 const timerH = document.getElementById("timer");
 let inputS = document.getElementById("start");
 let clickCounter = 0;
+let clickCounterA = 0;
 
 function timer(s, m) {
   s = parseInt(s) || 0;
@@ -16,7 +17,7 @@ function timer(s, m) {
     if (s <= 0 || s < 1) {
       endTime();
       clearInterval(countDown);
-    } else if (s <= 10) {
+    } else if (s <= 3) {
       sound(s);
     }
   }, 1000);
@@ -83,7 +84,6 @@ function clearRange() {
   document.getElementById("seconds").value = 0;
   document.getElementById("minutes").value = 0;
 }
-
 // -- END TIMER --
 
 // -- START INPUT MIN / MAX --
@@ -98,5 +98,3 @@ function imposeMinMax(el) {
     }
   }
 }
-
-// -- END INPUT MIN / MAX --
