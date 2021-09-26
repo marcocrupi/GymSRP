@@ -58,13 +58,13 @@
       <div class="col col-md-auto text-center pt-5 pb-5">
         <p class="nameS">SET</p>
         <p class="outputs mt-5 mb-5" id="sets">0</p>
-        <button id="setDone+" type="button" class="btn btn-warning btn-lg shadow-none">
+        <button id="setDoneP" type="button" class="btn btn-warning btn-lg shadow-none">
           +
         </button>
         <button id="resetSets" type="button" class="btn btn-danger btn-lg shadow-none">
           RESET
         </button>
-        <button id="setDone-" type="button" class="btn btn-warning btn-lg shadow-none">
+        <button id="setDoneL" type="button" class="btn btn-warning btn-lg shadow-none">
           -
         </button>
       </div>
@@ -72,7 +72,7 @@
 
     <div class="row justify-content-md-center pt-3 pb-5" id="containerR">
       <div class="col col-md-auto text-center pt-5 pb-5">
-        <iframe scrolling="no" width="360" height="720px" frameborder="0" src="./timer.html"></iframe>
+        <iframe scrolling="no" width="100%" height="720px" frameborder="0" src="./timer.html"></iframe>
       </div>
     </div>
 
@@ -83,13 +83,15 @@
 
           <div class="input-group mb-3 mt-4 mr-4">
             <span class="input-group-text">Percentage:</span>
-            <input type="number" onkeyup="imposeMinMax(this)" min="0" max="200" class="form-control" id="percentage" placeholder="0" pattern="[0-9]+" />
+            <input type="number" onkeyup="imposeMinMax(this)" min="0" max="200" class="form-control" id="percentage"
+              placeholder="0" pattern="[0-9]+" />
             <span class="input-group-text">%</span>
           </div>
 
           <div class="input-group mb-3 mt-4">
             <span class="input-group-text">Of:</span>
-            <input type="number" onkeyup="imposeMinMax(this)" min="0" max="1000" class="form-control" id="number" placeholder="0" pattern="[0-9]+" />
+            <input type="number" onkeyup="imposeMinMax(this)" min="0" max="1000" class="form-control" id="number"
+              placeholder="0" pattern="[0-9]+" />
           </div>
 
         </form>
@@ -119,7 +121,8 @@
 
           <div class="input-group mb-3 mt-4">
             <span class="input-group-text">Weight:</span>
-            <input type="number" onkeyup="imposeMinMax(this)" min="0" max="650" step="0.1" class="form-control" id="weight" placeholder="0" pattern="[0-9]+" />
+            <input type="number" onkeyup="imposeMinMax(this)" min="0" max="650" step="0.1" class="form-control"
+              id="weight" placeholder="0" pattern="[0-9]+" />
             <span class="input-group-text">Kg</span>
           </div>
         </form>

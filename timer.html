@@ -16,30 +16,32 @@
 </head>
 
 <body class="bodyT">
-    <center>
-        <p class="nameS">REST</p>
-        <p class="outputs mt-5 mb-5" id="timer">00:00</p>
-        <div class="number-input mb-5">
-            <label for="minutes">Minutes: </label>
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="ms-2 me-2"></button>
-            <input id="minutes" class="form-control" min="0" max="60" name="minutes" value="0" type="number"
-                pattern="[0-9]+">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus ms-2"></button>
-        </div>
-        </br>
-        <div class="number-input mb-5">
-            <label for="minutes">Seconds: </label>
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="ms-2 me-2"></button>
-            <input id="seconds" class="form-control" min="0" max="60" name="seconds" value="0" type="number"
-                pattern="[0-9]+">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus ms-2"></button>
-        </div>
-        </br>
-        <button type="button" id="start" class="btn btn-warning btn-lg shadow-none"
-            onclick="timer(document.getElementById('seconds').value,document.getElementById('minutes').value)">START /
-            STOP</button>
-        <button id="reset" type="button" class="btn btn-danger btn-lg shadow-none" onclick="resetFunction()">RESET</button>
-    </center>
+
+    <p class="nameS">REST</p>
+    <p class="outputs mt-5 mb-5" id="timer">00:00</p>
+    <div class="number-input mb-5">
+        <label for="minutes">Min. </label>
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="ms-2 me-2"></button>
+        <input id="minutes" class="form-control" min="0" max="60" name="minutes" value="0" type="number"
+            pattern="[0-9]+">
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus ms-2"></button>
+    </div>
+    </br>
+    <div class="number-input mb-5">
+        <label for="minutes">Sec. </label>
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="ms-2 me-2"></button>
+        <input id="seconds" class="form-control" min="0" max="60" name="seconds" value="0" type="number"
+            pattern="[0-9]+">
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus ms-2"></button>
+    </div>
+    </br>
+
+    <button type="button" id="start" class="btn btn-warning btn-lg shadow-none"
+        onclick="timer(document.getElementById('seconds').value,document.getElementById('minutes').value)">START /
+        STOP</button>
+    <button id="reset" type="button" class="btn btn-danger btn-lg shadow-none" onclick="resetFunction()">RESET</button>
+
+
     <script type="text/javascript" src="./timer.js"></script>
 </body>
 

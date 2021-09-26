@@ -1,8 +1,8 @@
 // -- START SET --
 
 const sets = document.getElementById("sets");
-const setDoneP = document.getElementById("setDone+");
-const setDoneL = document.getElementById("setDone-");
+const setDoneP = document.getElementById("setDoneP");
+const setDoneL = document.getElementById("setDoneL");
 const reset = document.getElementById("resetSets");
 let setR = 0;
 

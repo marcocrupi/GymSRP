@@ -1,14 +1,18 @@
-html,
-body {
+html, body {
   overflow-x: hidden;
 }
 
-/* .btn:active {
-  border: none;
-} */
+#setDoneP {
+  width: 50px;
+}
+
+#setDoneL {
+  width: 50px;
+}
 
 .bodyT {
-height: 720px;
+  height: 720px;
+  text-align: center;
 }
 
 html {
@@ -28,15 +32,14 @@ input:invalid {
   text-align: center;
   margin: auto;
   font-size: 6rem;
-
   display: block;
-  height: 19rem;
-  width: 19rem;
-  line-height: 19rem;
-
-  -moz-border-radius: 50%; /* or 50% */
-  border-radius: 50%; /* or 50% */
-
+  height: 16rem;
+  width: 16rem;
+  line-height: 16rem;
+  -moz-border-radius: 50%;
+  /* or 50% */
+  border-radius: 50%;
+  /* or 50% */
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
@@ -146,9 +149,7 @@ label {
   color: #737373;
 }
 
-.footer-links a:active,
-.footer-links a:focus,
-.footer-links a:hover {
+.footer-links a:active, .footer-links a:focus, .footer-links a:hover {
   color: #3366cc;
   text-decoration: none;
 }
@@ -185,13 +186,12 @@ label {
   .site-footer {
     padding-bottom: 0;
   }
-  .site-footer .copyright-text,
-  .site-footer .social-icons {
+  .site-footer .copyright-text, .site-footer .social-icons {
     text-align: center;
   }
 }
 
-/* TEST BUTTON + / - */
+/* TIMER BUTTON + / - */
 
 input[type="number"] {
   -webkit-appearance: textfield;
@@ -199,8 +199,7 @@ input[type="number"] {
   appearance: textfield;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
@@ -209,8 +208,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: inline-flex;
 }
 
-.number-input,
-.number-input * {
+.number-input, .number-input * {
   box-sizing: border-box;
 }
 
@@ -230,8 +228,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 50%;
 }
 
-.number-input button:before,
-.number-input button:after {
+.number-input button:before, .number-input button:after {
   display: inline-block;
   position: absolute;
   content: "";
@@ -247,8 +244,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .number-input input[type="number"] {
   font-family: sans-serif;
-  max-width: 7rem;
-  width: 6rem;
+  max-width: 6rem;
+  width: 5rem;
   padding: 0.5rem;
   border: none;
   border-width: 0 2px;
@@ -259,9 +256,11 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #000000;
 }
 
+/* PERCENTAGE INPUT + / - */
+
 .input-group input[type="number"] {
-  max-width: 8rem;
-  width: 7rem;
+  max-width: 7rem;
+  width: 6rem;
 }
 
 .input-group {
