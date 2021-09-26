@@ -84,3 +84,18 @@ function clearRange() {
 }
 
 // -- END TIMER --
+
+// -- START INPUT MIN / MAX --
+
+function imposeMinMax(el) {
+  if (el.value != "") {
+    if (parseInt(el.value) < parseInt(el.min)) {
+      el.value = el.min;
+    }
+    if (parseInt(el.value) > parseInt(el.max)) {
+      el.value = el.max;
+    }
+  }
+}
+
+// -- END INPUT MIN / MAX --

@@ -22,16 +22,16 @@
     <div class="number-input mb-5">
         <label for="minutes">Min. </label>
         <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="ms-2 me-2"></button>
-        <input id="minutes" class="form-control" min="0" max="60" name="minutes" value="0" type="number"
-            pattern="[0-9]+">
+        <input id="minutes" onkeyup="imposeMinMax(this)" class="form-control" min="0" max="60" name="minutes" value="0"
+            type="number" pattern="[0-9]+">
         <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus ms-2"></button>
     </div>
     </br>
     <div class="number-input mb-5">
         <label for="minutes">Sec. </label>
         <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="ms-2 me-2"></button>
-        <input id="seconds" class="form-control" min="0" max="60" name="seconds" value="0" type="number"
-            pattern="[0-9]+">
+        <input id="seconds" class="form-control" onkeyup="imposeMinMax(this)" min="0" max="60" name="seconds" value="0"
+            type="number" pattern="[0-9]+">
         <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus ms-2"></button>
     </div>
     </br>
@@ -40,7 +40,6 @@
         onclick="timer(document.getElementById('seconds').value,document.getElementById('minutes').value)">START /
         STOP</button>
     <button id="reset" type="button" class="btn btn-danger btn-lg shadow-none" onclick="resetFunction()">RESET</button>
-
 
     <script type="text/javascript" src="./timer.js"></script>
 </body>

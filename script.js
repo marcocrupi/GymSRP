@@ -78,6 +78,10 @@ const resetRMF = () => {
 
 resetRM.addEventListener("click", resetRMF);
 
+// -- PREDICTION EQUATIONS FOR 1RM --
+
+// -- START INPUT MIN / MAX --
+
 function imposeMinMax(el) {
   if (el.value != "") {
     if (parseInt(el.value) < parseInt(el.min)) {
@@ -89,4 +93,4 @@ function imposeMinMax(el) {
   }
 }
 
-// -- PREDICTION EQUATIONS FOR 1RM --
+// -- END INPUT MIN / MAX --
