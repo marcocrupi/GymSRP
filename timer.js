@@ -52,6 +52,7 @@ function displayTime(second) {
 
 function endTime() {
   timerH.style.fontSize = "3rem";
+  timerH.style.color = "red";
   timerH.innerHTML = "TIME OUT";
   let utterance = new SpeechSynthesisUtterance("TIME OUT");
   utterance.lang = "en-US";
