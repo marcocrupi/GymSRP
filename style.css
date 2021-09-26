@@ -3,6 +3,10 @@ body {
   overflow-x: hidden;
 }
 
+/* .btn:active {
+  border: none;
+} */
+
 .bodyT {
 height: 720px;
 }
