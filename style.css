@@ -1,5 +1,7 @@
-html, body {
+html,
+body {
   overflow-x: hidden;
+  touch-action: manipulation;
 }
 
 #setDoneP {
@@ -149,7 +151,9 @@ label {
   color: #737373;
 }
 
-.footer-links a:active, .footer-links a:focus, .footer-links a:hover {
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
   color: #3366cc;
   text-decoration: none;
 }
@@ -189,7 +193,8 @@ label {
   .site-footer [class^="col-"] {
     margin-bottom: 30px;
   }
-  .site-footer .copyright-text, .site-footer .social-icons {
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
     text-align: center;
   }
 }
@@ -202,7 +207,8 @@ input[type="number"] {
   appearance: textfield;
 }
 
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
@@ -211,7 +217,8 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   display: inline-flex;
 }
 
-.number-input, .number-input * {
+.number-input,
+.number-input * {
   box-sizing: border-box;
 }
 
@@ -231,7 +238,8 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   border-radius: 50%;
 }
 
-.number-input button:before, .number-input button:after {
+.number-input button:before,
+.number-input button:after {
   display: inline-block;
   position: absolute;
   content: "";
