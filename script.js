@@ -7,22 +7,24 @@ const reset = document.getElementById("resetSets");
 let setR = 0;
 
 const counterP = () => {
-  ++setR;
   if (setR >= 0) {
+    ++setR;
     ++sets.innerHTML;
   }
 };
 
 const counterL = () => {
-  --setR;
-  --sets.innerHTML;
-  if (setR <= 0 || setR < 1) {
+  if (setR > 0) {
+    --setR;
+    --sets.innerHTML;
+  } else if (setR <= 0 || setR < 1) {
     setR = 0;
     sets.innerHTML = "0";
   }
 };
 
 const resetSets = () => {
+  setR = 0;
   return (sets.innerHTML = 0);
 };
 
