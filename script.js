@@ -44,7 +44,10 @@ const calculatorP = (per, num) => {
   num = parseFloat(num) || 0;
   let result1 = num * per;
   let result2 = result1 / 100;
-  return (result.innerHTML = result2);
+  let numbers = Number(result2);
+  let roundedString = numbers.toFixed(2);
+  let rounded = Number(roundedString);
+  return (result.innerHTML = rounded);
 };
 
 const resetP = () => {
@@ -69,7 +72,10 @@ const calculatorRM = (r, w) => {
   let op2 = 100 - op1;
   let op3 = op2 / 100;
   let op4 = w / op3;
-  return (resultRM.innerHTML = parseInt(op4) + "Kg");
+  let numbersOP4 = Number(op4);
+  let roundedString = numbersOP4.toFixed(1);
+  let rounded = Number(roundedString);
+  return (resultRM.innerHTML = parseFloat(rounded) + "Kg");
 };
 
 const resetRMF = () => {
@@ -86,10 +92,10 @@ resetRM.addEventListener("click", resetRMF);
 
 function imposeMinMax(el) {
   if (el.value != "") {
-    if (parseInt(el.value) < parseInt(el.min)) {
+    if (parseFloat(el.value) < parseFloat(el.min)) {
       el.value = el.min;
     }
-    if (parseInt(el.value) > parseInt(el.max)) {
+    if (parseFloat(el.value) > parseFloat(el.max)) {
       el.value = el.max;
     }
   }
