@@ -36,12 +36,20 @@ reset.addEventListener("click", resetSets);
 
 // -- START PERCENTAGE CALCULATOR --
 
+const sourceP = document.getElementById("percentage");
+const sourceN = document.getElementById("number");
 const result = document.getElementById("resultP");
-const resetPer = document.getElementById("resetP");
 
-const calculatorP = (per, num) => {
+const inputHandler = function (per, num) {
+  per = document.getElementById("percentage").value;
+  num = document.getElementById("number").value;
   per = parseFloat(per) || 0;
   num = parseFloat(num) || 0;
+  if (per > 200) {
+    per = 200;
+  } else if (num > 1000) {
+    num = 1000;
+  }
   let result1 = num * per;
   let result2 = result1 / 100;
   let numbers = Number(result2);
@@ -49,6 +57,25 @@ const calculatorP = (per, num) => {
   let rounded = Number(roundedString);
   return (result.innerHTML = rounded);
 };
+
+sourceP.addEventListener("input", inputHandler);
+sourceN.addEventListener("input", inputHandler);
+sourceP.addEventListener("propertychange", inputHandler);
+sourceN.addEventListener("propertychange", inputHandler);
+
+// const result = document.getElementById("resultP");
+const resetPer = document.getElementById("resetP");
+
+// const calculatorP = (per, num) => {
+//   per = parseFloat(per) || 0;
+//   num = parseFloat(num) || 0;
+//   let result1 = num * per;
+//   let result2 = result1 / 100;
+//   let numbers = Number(result2);
+//   let roundedString = numbers.toFixed(2);
+//   let rounded = Number(roundedString);
+//   return (result.innerHTML = rounded);
+// };
 
 const resetP = () => {
   document.getElementById("percentage").value = "";
@@ -62,12 +89,20 @@ resetPer.addEventListener("click", resetP);
 
 // -- PREDICTION EQUATIONS FOR 1RM --
 
+const sourceR = document.getElementById("reps");
+const sourceW = document.getElementById("weight");
 const resultRM = document.getElementById("resultRM");
-const resetRM = document.getElementById("resetRM");
 
-const calculatorRM = (r, w) => {
+const inputHandlerRM = function (w, r) {
+  r = parseInt(document.getElementById("reps").value);
+  w = document.getElementById("weight").value;
   r = parseInt(r) || 0;
   w = parseFloat(w) || 0;
+  if (w > 650) {
+    w = 650;
+  } else if (r > 12) {
+    r = 12;
+  }
   let op1 = r * 2.5;
   let op2 = 100 - op1;
   let op3 = op2 / 100;
@@ -77,6 +112,27 @@ const calculatorRM = (r, w) => {
   let rounded = Number(roundedString);
   return (resultRM.innerHTML = parseFloat(rounded) + "Kg");
 };
+
+sourceR.addEventListener("input", inputHandlerRM);
+sourceW.addEventListener("input", inputHandlerRM);
+sourceR.addEventListener("propertychange", inputHandlerRM);
+sourceW.addEventListener("propertychange", inputHandlerRM);
+
+// const resultRM = document.getElementById("resultRM");
+const resetRM = document.getElementById("resetRM");
+
+// const calculatorRM = (r, w) => {
+//   r = parseInt(r) || 0;
+//   w = parseFloat(w) || 0;
+//   let op1 = r * 2.5;
+//   let op2 = 100 - op1;
+//   let op3 = op2 / 100;
+//   let op4 = w / op3;
+//   let numbersOP4 = Number(op4);
+//   let roundedString = numbersOP4.toFixed(1);
+//   let rounded = Number(roundedString);
+//   return (resultRM.innerHTML = parseFloat(rounded) + "Kg");
+// };
 
 const resetRMF = () => {
   document.getElementById("weight").value = "";

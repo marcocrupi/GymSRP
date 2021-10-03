@@ -83,15 +83,15 @@
 
           <div class="input-group mb-3 mt-4 mr-4">
             <span class="input-group-text">Percentage:</span>
-            <input id="percentage" type="number" onkeyup="imposeMinMax(this)" step="0.1" min="0" max="200" class="form-control"
-              placeholder="0" pattern="[0-9]+" />
+            <input id="percentage" type="number" onkeyup="imposeMinMax(this)" step="0.1" min="0" max="200"
+              class="form-control" placeholder="0" pattern="[0-9]+" />
             <span class="input-group-text">%</span>
           </div>
 
           <div class="input-group mb-3 mt-4">
             <span class="input-group-text">Of:</span>
-            <input type="number" onkeyup="imposeMinMax(this)" step="0.1" min="0" max="1000" class="form-control" id="number"
-              placeholder="0" pattern="[0-9]+" />
+            <input id="number" type="number" onkeyup="imposeMinMax(this)" step="0.1" min="0" max="1000"
+              class="form-control" placeholder="0" pattern="[0-9]+" />
           </div>
 
         </form>
@@ -99,10 +99,6 @@
         <p class="resultT">Result:</p>
         <p class="outputs mt-5 mb-5" id="resultP">0</p>
 
-        <button type="button" class="btn btn-warning btn-lg shadow-none"
-          onclick="calculatorP(document.getElementById('percentage').value,document.getElementById('number').value)">
-          COUNT
-        </button>
         <button id="resetP" type="button" class="btn btn-danger btn-lg shadow-none">
           RESET
         </button>
@@ -129,10 +125,7 @@
 
         <p class="resultT">Estimated 1 RM:</p>
         <p class="outputs mt-5 mb-5" id="resultRM">0</p>
-        <button type="button" class="btn btn-warning btn-lg shadow-none"
-          onclick="calculatorRM(document.getElementById('reps').value,document.getElementById('weight').value)">
-          COUNT
-        </button>
+
         <button id="resetRM" type="button" class="btn btn-danger btn-lg shadow-none">
           RESET
         </button>
