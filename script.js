@@ -40,9 +40,7 @@ const sourceP = document.getElementById("percentage");
 const sourceN = document.getElementById("number");
 const result = document.getElementById("resultP");
 
-const inputHandler = function () {
-  let per = sourceP.value;
-  let num = sourceN.value;
+const inputHandler = function (per,num) {
   per = parseFloat(per) || 0;
   num = parseFloat(num) || 0;
   if (per > 200) {
@@ -58,8 +56,12 @@ const inputHandler = function () {
   return (result.innerHTML = rounded);
 };
 
-sourceP.addEventListener("input", inputHandler);
-sourceN.addEventListener("input", inputHandler);
+sourceP.addEventListener("input", function(){
+  inputHandler(sourceP.value,sourceN.value);
+});
+sourceN.addEventListener("input", function(){
+  inputHandler(sourceP.value,sourceN.value);
+});
 
 const resetPer = document.getElementById("resetP");
 
@@ -79,9 +81,9 @@ const sourceR = document.getElementById("reps");
 const sourceW = document.getElementById("weight");
 const resultRM = document.getElementById("resultRM");
 
-const inputHandlerRM = function () {
-  let r = parseInt(sourceR.value) || 0;
-  let w = parseFloat(sourceW.value) || 0;
+const inputHandlerRM = function (r,w) {
+  r = parseInt(r) || 0;
+  w = parseFloat(w) || 0;
   // r = parseInt(r) || 0;
   // w = parseFloat(w) || 0;
   if (w > 650) {
@@ -99,8 +101,12 @@ const inputHandlerRM = function () {
   return (resultRM.innerHTML = parseFloat(rounded) + "Kg");
 };
 
-sourceR.addEventListener("input", inputHandlerRM);
-sourceW.addEventListener("input", inputHandlerRM);
+sourceR.addEventListener("input", function() {
+  inputHandlerRM(sourceR.value,sourceW.value);
+});
+sourceW.addEventListener("input", function() {
+  inputHandlerRM(sourceR.value,sourceW.value);
+});
 
 // const resultRM = document.getElementById("resultRM");
 const resetRM = document.getElementById("resetRM");
